@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+	<button onclick="vitek.launch()">Start!</button>
+	<button onclick="vitek.stop()">Stop!</button>
+	<p class="time">Время ожидания:</p>
+	<p class="coffe-stop"></p>
+	<p class="coffe-pronto"></p>
+	<p class="grain"></p>
+	<p class="water"></p>
+	
+<script>
+/* ДЗ
+доработать кофеварку
+ввести значение зерен
+проверка на пустую кофеварку
+реализовать кнопку стоп
+* время приготовления зависит от кол-ва зерен
+*/
+
+    function CoffeeMachine(power) {
+      // удельная теплоемкость воды
+      const waterHeatCapacity = 4200
+      // температура воды до которой греем
+      const maxTemp = 90
+      // колличество воды в кофеварке
+	    let waterAmount = 0
+			// время затрачиваемое на помол
+			let grainTime;
+			let timer;
+			let machineWorking = false;
+			let grainTemp = false;
+			let waterTemp = false;
+		
+			this.grainGrinder = function (newGrain) {
+				if (newGrain <= 0) {
+				document.querySelector("p.grain").innerHTML = "Зерна отсутствуют";
+				document.querySelector("p.grain").style.color = "red";
+				//alert.error("Зерна отсутствуют");
+				} else {
+					grainTime = newGrain;
+					grainTemp = true;
+				}
+			}
+
+      this.fill = function (newAmount) {
+        if(newAmount >= 50) {
+          waterAmount = newAmount;
+					waterTemp = true;
+        } else {
+			document.querySelector("p.water").innerHTML = 'Слишком мало воды!';
+			document.querySelector("p.water").style.color = "red";
+            //console.error('Слишком мало воды!')
+        }
+      }
+
+      const getBoilTime = function () {
+        return ( waterAmount * waterHeatCapacity * maxTemp) / power + (grainTime * 100)  ;
+      }
+
+      this.launch = function () {
+				if (grainTemp && waterTemp) {
+					const time = getBoilTime()
+				  document.querySelector("p.time").innerHTML = `Время ожидания: ${time}`;
+          // console.info(`Время ожидания: ${time}`)
+     	    timer = setTimeout(function () {
+			    	document.querySelector("p.coffe-pronto").innerHTML = 'Ваш кофе готов!';
+            // console.log('Ваш кофе готов!')
+		      }, time)
+				  machineWorking = true;
+				}
+	  }
+	  
+	  	this.stop = function () {
+		  	clearTimeout(timer);
+		 	if (machineWorking) {
+				document.querySelector("p.coffe-stop").innerHTML = "Вы остановили кофеварку";
+				// console.log("Вы остановили кофеварку");
+		  }
+	  }
+  }
+
+	var vitek = new CoffeeMachine(3000)
+	vitek.fill(50)
+	vitek.grainGrinder(30);
+	
+</script>
+</body>
+</html>
