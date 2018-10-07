@@ -1,4 +1,4 @@
-//получаем и выводим данные пользователей
+//получаем и выводим данные пользователей .
 var buttonTs1 = document.getElementsByClassName("button-ts1")[0];
 var count = 0;
 buttonTs1.addEventListener("click", () => {
