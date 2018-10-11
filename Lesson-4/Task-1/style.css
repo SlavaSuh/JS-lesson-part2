@@ -1,0 +1,78 @@
+body {
+    background: lightgray;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+
+.button, .button-vert {
+    padding: 10px 40px;
+    
+    cursor: pointer;
+    background: #12b71d;
+    color: #ffffff;
+    font-size: 1.1rem;
+    transition: .4s;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+}
+.button:hover, button-vert:hover {
+    background: #00ff3f;
+    transition: .4s;
+}
+.buttons-vert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.button-vert {
+    margin: 1px;
+}
+.wrapper-blocks {
+    width: 70%;
+    position: relative;
+    top: -3px;
+    z-index: -100;
+    background: #ffffff;
+    padding: 20px;
+    border: 2px solid #00ff3f;
+    border-radius: 5px;
+}
+.wrapper-blocks-vertical {
+    width: 40%;
+    position: relative;
+    top: -180px;
+    left: 160px;
+    z-index: -100;
+    background: #ffffff;
+    padding: 20px;
+    border: 2px solid #00ff3f;
+    border-radius: 5px;
+}
+.tab-block {
+    display: none;
+}
+.tab-block-v {
+    display: none;
+}
+.active {
+    display: block;
+}
+.active-button {
+    border-left: 2px solid #00ff3f;
+    border-right: 2px solid #00ff3f;
+    border-top: 2px solid #00ff3f;
+    border-bottom: 2px solid #ffffff;
+    background: #ffffff;
+    color: #12b71d;
+}
+.active-button-vert {
+    border-left: 2px solid #00ff3f;
+    border-right: 2px solid #ffffff;
+    border-top: 2px solid #00ff3f;
+    border-bottom: 2px solid #00ff3f;
+    background: #ffffff;
+    color: #12b71d;
+}

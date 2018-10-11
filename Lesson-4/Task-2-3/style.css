@@ -1,0 +1,36 @@
+body {
+    background: lightgray;
+    margin: 0;
+    padding: 0;
+}
+form {
+    background: #ffffff;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p {
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+input, textarea {
+    display: block;
+    width: 200px;
+}
+select, textarea{
+    margin: 20px 0;
+}
+#forma label.error {
+    font-size: 0.8em;
+    color: #F00;
+    font-weight: bold;
+    display: block;
+    margin-left: 215px;
+}
+#forma input.error {
+    background: #FFA9B8;
+    border: 1px solid red;
+}
