@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script-->
+            <!--src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"-->
+            <!--integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="-->
+            <!--crossorigin="anonymous"></script>-->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jqueryui@1.11.1/jquery-ui.min.css">-->
+    <script src="jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="description-homework">
+            <p>
+                2) В форму обратной связи добавить возможность выбора города обращения. Сам список должен загружаться после загрузки страницы через AJAX.
+            </p>
+            <p>
+                3) * Список из п.2 превратить в текстовое поле-автокомплит. Если пользователь
+                 ввёл 3 и более символов, нужно подгрузить список городов и показать подходящие по
+                 вводу. При клике на подходящий город, ввести его полное название в текстовое поле.
+            </p>
+        </div>
+        <form id="forma">
+            <fieldset>
+                <label> Name :
+                    <input type="text" id="name" name="name">
+                </label>
+                <label> Phone :
+                    <input type="digits" id="phone" name="phone">
+                </label>
+                <label> Email :
+                    <input type="email" id="email" name="email">
+                </label>
+                <label> City :
+                    <input type="text" id="city" list="autocomplete">
+                    <datalist id="autocomplete" accesskey="3">
+                    </datalist>
+                </label>
+                <!--<select name="cites" id="select-city"></select>-->
+                <textarea name="textarea" id="textarea" placeholder="Type the text"></textarea>
+                <input type="submit" name="button" value="Send" id="button">
+            </fieldset>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
