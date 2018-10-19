@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.catalog-item {
+    border: 2px solid #047c3a;
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 10px green;
+    border-radius: 10px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+.item-name, .item-price {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+}
+.button {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background: #47cc2c;
+    transition: .7s;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 5px 25px green;
+}
+.button:hover {
+    background: #469336;
+    transition: .7s;
+    box-shadow: 0 5px 25px green inset;
+}
+
+.cart {
+    width: 500px;
+    background: yellow;
+    position: absolute;
+    top: 20px;
+    right: 85px;
+    display: none;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 20px;
+}
+.cart::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    position: absolute;
+    top: 10px;
+    right: -11px;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+.show-cart {
+    display: block;
+}
+
+.cart img, .cart-item img {
+    display: inline;
+    width: 48px;
+    margin: 0;
+}
+.cart-item {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.cart-button {
+    width: 48px;
+    height: 48px;
+    border:none;
+    outline-color: #469336;
+    background-image: url("../img/cart.png");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.carousel {
+    padding: 10px;
+    width: 600px;
+    height: 230px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.carousel .catalog {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    left: 0;
+    /* justify-content: space-between; */
+    
+}
+.carousel .catalog-item {
+    width: 150px;
+    box-shadow: none;
+    margin-right: 5px;
+    border: none;
+    transition: .5s;
+}
+.carousel .catalog-item:hover {
+    box-shadow: 0 0 10px 3px green;
+    transition: .5s;
+}
+.carousel .catalog-item img{
+    width: 50px;
+}
+.carousel .item-name, .item-price {
+    font-size: 16px;
+}
+.carousel .button {
+    padding: 5px 10px;
+}

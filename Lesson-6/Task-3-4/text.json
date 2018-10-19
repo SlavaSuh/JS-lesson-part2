@@ -1,0 +1,74 @@
+{
+    "1":{
+        "name": "Яблоки",
+        "price": 23,
+        "order": 1,
+        "img": "apple.png"
+    },
+    "2":{
+        "name": "Бананы",
+        "price": 56,
+        "order": 2,
+        "img": "banana.png"
+    },
+    "3":{
+        "name": "Морковь",
+        "price": 11,
+        "order": 3,
+        "img": "carrot.png"
+    },
+    "4":{
+        "name": "Черешня",
+        "price": 67,
+        "order": 4,
+        "img": "cherry.png"
+    },
+    "5":{
+        "name": "Кукуруза",
+        "price": 20.5,
+        "order": 5,
+        "img": "corn.png"
+    },
+    "6":{
+        "name": "Чеснок",
+        "price": 7.25,
+        "order": 6,
+        "img": "garlic.png"
+    },
+    "7":{
+        "name": "Лимоны",
+        "price": 50,
+        "order": 7,
+        "img": "lemon.png"
+    },
+    "8":{
+        "name": "Апельсины",
+        "price": 9000,
+        "order": 8,
+        "img": "orange.png"
+    },
+    "9":{
+        "name": "Персики",
+        "price": 65,
+        "order": 9,
+        "img": "peach.png"
+    },
+    "10":{
+        "name": "Перец",
+        "price": 40,
+        "order": 10,
+        "img": "pepper.png"
+    },
+    "11":{
+        "name": "Сливы",
+        "price": 70,
+        "order": 11,
+        "img": "plum.png"
+    },
+    "12":{
+        "name": "Клубника",
+        "price": 110,
+        "order": 12,
+        "img": "strawberry.png"
+    }
+}
