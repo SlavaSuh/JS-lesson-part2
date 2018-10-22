@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson6</title>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+    integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-block">
+                        <label for="nameInput">Name :</label>
+                        <input type="text" data-key="name"  id="nameInput"  placeholder="Enter name" class="correct">
+                    </div>
+                    <div class="form-block">
+                        <label for="inputBirthday">Birthday :</label>
+                        <input type="text" data-key="birthday"  id="inputBirthday" class="correct" placeholder="Birthday 00/00/0000">
+                    </div>
+                    <div class="form-block">
+                        <label for="inputEmail">Email :</label>
+                        <input type="email" data-key="email"  id="inputEmail" class="correct" placeholder="Enter email">
+                    </div>
+                    <div class="form-block">
+                        <label for="inputPhone">Phone :</label>
+                        <input type="text" data-key="phone" id="inputPhone" class="correct" placeholder="Enter phone number">
+                    </div>
+                    <button id="button" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+        <div class="row">
+            <div class="col-md">
+                <div class="error-block">
+                    <div class="name-error " data-key="name" title="Имя">
+                        <p class="error1">Введите Имя (только русские и английские буквы)</p>
+                    </div>
+                    <div class="birthday-error" data-key="birthday" title="дата рождения">
+                        <p class="error1">Введите дату своего рождения в формате (01/02/2000)</p>
+                    </div>
+                    <div class="email-error" data-key="email" title="Емаил">
+                        <p class="error1">Введите емаил в формате (tolik@mail.ru)</p>
+                    </div>
+                    <div class="phone-error" data-key="phone" title="Номер телефона">
+                        <p class="error1">Введите номер телефона в формате ( +1(222)333-4444** )</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-md">
+                <ul class="dataList"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

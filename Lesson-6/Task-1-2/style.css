@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem; 
+    font-weight: bold;
+}
+form {
+    width: 600px;
+    background: rgb(255, 242, 5);
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 5px yellow;
+}
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 20px 20px 5px 0;
+    margin-left: 70px;
+}
+button {
+    padding: 13px 150px;
+    align-self: center;
+    margin: 20px 0 0 0;
+    border: none;
+    cursor: pointer;
+    background: #000000;
+    color: rgb(255, 242, 5);
+    transition: .5s;
+    box-shadow: 0 0 33px #000000;
+}
+button:hover {
+    transition: .5s;
+    background: rgb(79, 77, 77);
+    color: rgb(226, 229, 48);
+    box-shadow: 0 0 33px #000000 inset;
+}
+.error {
+    outline: none;
+    border-bottom: 2px solid red;
+}
+.correct {
+    outline: none;
+    border-bottom: 2px solid #000000;
+}
+.error-block {
+    display: none;
+    font-size: 16px;
+}
+.error1 {
+    font-size: 16px;
+}
